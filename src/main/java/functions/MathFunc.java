@@ -7,7 +7,6 @@ public abstract class MathFunc {
         this.accuracy = accuracy;
     }
 
-
     public abstract double compute(double x);
 
     public double getAccuracy() {

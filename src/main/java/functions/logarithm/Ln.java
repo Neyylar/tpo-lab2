@@ -6,7 +6,6 @@ import java.text.DecimalFormat;
 
 public class Ln extends MathFunc {
     private static final int COUNT_ITERATION = 1000000;
-
     public Ln(double accuracy) {
         super(accuracy);
     }
@@ -39,8 +38,6 @@ public class Ln extends MathFunc {
             currentValue += compute(x - 1);
         }
 
-        DecimalFormat df = new DecimalFormat("#.#####");
-
-        return Double.parseDouble(df.format(currentValue).replace(",", "."));
+        return currentValue;
     }
 }

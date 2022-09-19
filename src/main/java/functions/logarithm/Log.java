@@ -5,14 +5,13 @@ import functions.MathFunc;
 import java.text.DecimalFormat;
 
 public class Log extends MathFunc {
-    private final static int BASIS = 2;
-
     private final Ln lnFunc;
-    private final DecimalFormat df = new DecimalFormat("#.#####");
+    private final int basis;
 
-    public Log(double accuracy, Ln lnFunc) {
+    public Log(double accuracy, int basis) {
         super(accuracy);
-        this.lnFunc = lnFunc;
+        this.lnFunc = new Ln(accuracy);
+        this.basis = basis;
     }
 
     @Override
@@ -22,6 +21,6 @@ public class Log extends MathFunc {
         } else if (x == Double.POSITIVE_INFINITY) {
             return Double.POSITIVE_INFINITY;
         }
-        return Double.parseDouble(df.format(lnFunc.compute(x) / lnFunc.compute(BASIS)).replace(",", "."));
+        return lnFunc.compute(x) / lnFunc.compute(basis);
     }
 }
