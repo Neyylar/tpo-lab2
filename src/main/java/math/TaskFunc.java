@@ -1,8 +1,8 @@
-package functions;
+package math;
 
-import functions.logarithm.Ln;
-import functions.logarithm.Log;
-import functions.trigonometry.Csc;
+import math.logarithm.Ln;
+import math.logarithm.Log;
+import math.trigonometry.Csc;
 
 public class TaskFunc extends MathFunc {
     private final MathFunc csc, ln, log2, log3, log5, log10;

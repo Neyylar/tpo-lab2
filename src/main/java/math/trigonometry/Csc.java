@@ -1,7 +1,6 @@
-package functions.trigonometry;
+package math.trigonometry;
 
-import functions.MathFunc;
-import functions.logarithm.Ln;
+import math.MathFunc;
 
 public class Csc extends MathFunc {
     private final Sin sinFunc;

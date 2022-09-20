@@ -1,4 +1,4 @@
-package functions;
+package math;
 
 public abstract class MathFunc {
     private final double accuracy;

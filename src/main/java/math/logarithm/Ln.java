@@ -1,8 +1,6 @@
-package functions.logarithm;
+package math.logarithm;
 
-import functions.MathFunc;
-
-import java.text.DecimalFormat;
+import math.MathFunc;
 
 public class Ln extends MathFunc {
     private static final int COUNT_ITERATION = 1000000;
@@ -12,10 +10,16 @@ public class Ln extends MathFunc {
 
     @Override
     public double compute(double x) {
-        if (Double.isNaN(x) || x <= 0.0) {
+        if (Double.isNaN(x) || x < 0.0) {
             return Double.NaN;
         } else if (x == Double.POSITIVE_INFINITY) {
             return Double.POSITIVE_INFINITY;
+        } else if (x == 0) {
+            return Double.NEGATIVE_INFINITY;
+        }
+
+        if (Double.isNaN(getAccuracy())) {
+            throw new IllegalArgumentException("Accuracy is NaN");
         }
 
         double currentValue = 0;
@@ -27,13 +31,13 @@ public class Ln extends MathFunc {
                 previousValue = currentValue;
                 currentValue += ((Math.pow(-1, iteration - 1) * Math.pow(x - 1, iteration)) / iteration);
                 iteration++;
-            } while (getAccuracy() <= Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
+            } while (getAccuracy() <= 2*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
         } else {
             do {
                 previousValue = currentValue;
                 currentValue += ((Math.pow(-1, iteration - 1) * Math.pow(x - 1, -iteration)) / iteration);
                 iteration++;
-            } while (getAccuracy() <= Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
+            } while (getAccuracy() <= 2*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
 
             currentValue += compute(x - 1);
         }

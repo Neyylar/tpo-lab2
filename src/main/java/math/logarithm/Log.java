@@ -1,8 +1,6 @@
-package functions.logarithm;
+package math.logarithm;
 
-import functions.MathFunc;
-
-import java.text.DecimalFormat;
+import math.MathFunc;
 
 public class Log extends MathFunc {
     private final Ln lnFunc;

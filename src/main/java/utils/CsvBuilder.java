@@ -1,7 +1,7 @@
 package utils;
 
 
-import functions.MathFunc;
+import math.MathFunc;
 
 import java.io.IOException;
 import java.io.OutputStream;

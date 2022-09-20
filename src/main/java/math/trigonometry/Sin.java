@@ -1,9 +1,10 @@
-package functions.trigonometry;
+package math.trigonometry;
 
-import functions.MathFunc;
+import math.MathFunc;
 
 public class Sin extends MathFunc {
 
+    private static final int COUNT_ITERATION = 1000000;
     public Sin(double accuracy) {
         super(accuracy);
     }
@@ -13,8 +14,8 @@ public class Sin extends MathFunc {
         if (Double.isNaN(x) || Double.isInfinite(x)) {
             return Double.NaN;
         }
-        if (Double.isNaN(getAccuracy()) || Math.abs(getAccuracy()) < 1E-6) {
-            throw new IllegalArgumentException("Accuracy is too small or NaN");
+        if (Double.isNaN(getAccuracy())) {
+            throw new IllegalArgumentException("Accuracy is NaN");
         }
         x = x % (2 * Math.PI);
 
@@ -28,7 +29,7 @@ public class Sin extends MathFunc {
             step += 2;
             result += sign * delta;
             sign *= -1;
-        } while (Math.abs(delta) > Math.abs(getAccuracy()));
+        } while (2*Math.abs(delta) > Math.abs(getAccuracy()) && step/2 < COUNT_ITERATION);
 
         return result;
     }
