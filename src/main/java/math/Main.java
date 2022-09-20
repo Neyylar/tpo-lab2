@@ -1,8 +1,8 @@
 package math;
 
-import math.logarithm.Ln;
-import math.trigonometry.Csc;
-import math.trigonometry.Sin;
+import math.unit.logarithm.Ln;
+import math.unit.trigonometry.Csc;
+import math.unit.trigonometry.Sin;
 
 public class Main {
     public static void main(String[] args) {

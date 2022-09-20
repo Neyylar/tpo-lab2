@@ -1,4 +1,4 @@
-package math.trigonometry;
+package math.unit.trigonometry;
 
 import math.MathFunc;
 

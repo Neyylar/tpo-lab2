@@ -1,4 +1,4 @@
-package math.logarithm;
+package math.unit.logarithm;
 
 import math.MathFunc;
 

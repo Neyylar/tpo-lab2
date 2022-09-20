@@ -1,4 +1,4 @@
-package math.logarithm;
+package math.unit.logarithm;
 
 import math.MathFunc;
 
@@ -9,6 +9,12 @@ public class Log extends MathFunc {
     public Log(double accuracy, int basis) {
         super(accuracy);
         this.lnFunc = new Ln(accuracy);
+        this.basis = basis;
+    }
+
+    public Log(double accuracy, int basis, Ln ln) {
+        super(accuracy);
+        this.lnFunc = ln;
         this.basis = basis;
     }
 
