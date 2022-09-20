@@ -4,7 +4,7 @@ import math.MathFunc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import utils.СsvMock;
+import utils.CsvMock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyDouble;
@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
 public class CscTest {
     private static final double ACCURACY = 0.00001;
     private MathFunc csc;
-    СsvMock csvMock = new СsvMock("src/test/resources/math/sin.csv");
+    CsvMock csvMock = new CsvMock("src/test/resources/math/sin.csv");
     Sin sinMock = mock(Sin.class);
 
     @BeforeEach

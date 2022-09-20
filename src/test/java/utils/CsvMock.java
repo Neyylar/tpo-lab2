@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class СsvMock {
+public class CsvMock {
     private final String filesource;
     private List<List<String>> values;
-    public СsvMock(String filesource) {
+    public CsvMock(String filesource) {
         this.filesource = filesource;
     }
 
     private void readCsv(){
         List<List<String>> records = new ArrayList<>();
-        try (CSVReader csvReader = new CSVReader(new FileReader(this.filesource));) {
+        try (CSVReader csvReader = new CSVReader(new FileReader(this.filesource))) {
             String[] values;
             while ((values = csvReader.readNext()) != null) {
                 records.add(Arrays.asList(values));

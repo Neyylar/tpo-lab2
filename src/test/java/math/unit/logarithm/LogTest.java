@@ -4,7 +4,7 @@ import math.MathFunc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import utils.СsvMock;
+import utils.CsvMock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyDouble;
@@ -17,7 +17,7 @@ public class LogTest {
     private MathFunc log3;
     private MathFunc log5;
     private MathFunc log10;
-    СsvMock csvMock = new СsvMock("src/test/resources/math/ln.csv");
+    CsvMock csvMock = new CsvMock("src/test/resources/math/ln.csv");
     Ln lnMock = mock(Ln.class);
 
     @BeforeEach
