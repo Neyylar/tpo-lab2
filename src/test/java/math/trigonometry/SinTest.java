@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class sinTest {
+public class SinTest {
     private static final double ACCURACY = 0.00001;
 
     private MathFunc sin;

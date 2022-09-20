@@ -1,4 +1,4 @@
 package math.logarithm;
 
-public class logTest {
+public class LogTest {
 }

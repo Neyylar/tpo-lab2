@@ -1,4 +1,4 @@
 package math.trigonometry;
 
-public class cscTest {
+public class CscTest {
 }

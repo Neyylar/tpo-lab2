@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class lnTest {
+public class LnTest {
     private static final double ACCURACY = 0.0001;
 
     private MathFunc ln;
