@@ -9,7 +9,7 @@ import java.io.OutputStream;
 public class CsvBuilder {
     private final MathFunc func;
     private final OutputStream outputStream;
-    private Delimiter delimiter = Delimiter.COMMA;
+    private Delimiter delimiter = Delimiter.TAB;
 
     public CsvBuilder(MathFunc func, OutputStream outputStream) {
         this.func = func;

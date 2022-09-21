@@ -29,8 +29,9 @@ public class Sin extends MathFunc {
             step += 2;
             result += sign * delta;
             sign *= -1;
-        } while (2*Math.abs(delta) > Math.abs(getAccuracy()) && step/2 < COUNT_ITERATION);
+        } while (10*Math.abs(delta) > Math.abs(getAccuracy()) && step/2 < COUNT_ITERATION);
 
+        if (Math.abs(result) < getAccuracy()) result = 0.0;
         return result;
     }
 }

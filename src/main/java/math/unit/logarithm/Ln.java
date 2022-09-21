@@ -31,13 +31,13 @@ public class Ln extends MathFunc {
                 previousValue = currentValue;
                 currentValue += ((Math.pow(-1, iteration - 1) * Math.pow(x - 1, iteration)) / iteration);
                 iteration++;
-            } while (getAccuracy() <= 2*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
+            } while (getAccuracy() <= 1000*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
         } else {
             do {
                 previousValue = currentValue;
                 currentValue += ((Math.pow(-1, iteration - 1) * Math.pow(x - 1, -iteration)) / iteration);
                 iteration++;
-            } while (getAccuracy() <= 2*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
+            } while (getAccuracy() <= 1000*Math.abs(currentValue - previousValue) && iteration < COUNT_ITERATION);
 
             currentValue += compute(x - 1);
         }
