@@ -1,6 +1,5 @@
 package math.integration;
 
-import math.MathFunc;
 import math.unit.trigonometry.Csc;
 import math.unit.trigonometry.Sin;
 import org.junit.jupiter.api.BeforeEach;

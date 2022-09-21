@@ -14,7 +14,6 @@ import static org.mockito.Mockito.*;
 
 public class TaskIntTest {
     private static final double ACCURACY = 0.01;
-    private static Sin sin;
     private static Csc csc;
     private static Ln ln;
     private static Log log2, log3, log5, log10;
